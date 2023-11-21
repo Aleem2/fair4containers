@@ -13,7 +13,7 @@ RUN apt install -y vim
 EXPOSE 80/tcp   
 
 # Changing container directory to home. 
-WORKDIR /home # Changing working directory to home
+WORKDIR /home
 
 # Copying license, citation.cff and readme files to home directory
 COPY . /home 
