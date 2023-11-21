@@ -1,9 +1,19 @@
 FROM python:3.12.0
-RUN pip3 install --upgrade pip 
-RUN pip install Scrapy==2.11.0 # web scraping tool 
-RUN pip install ipython==8.17.2 # ipython makes scrapy shell interactive with autocomplete and help
-RUN apt update
-RUN apt install -y vim # simple editor to create scrapy spiders files
-EXPOSE 80/tcp   
-COPY . .
 
+# Installing web scraping tool
+RUN pip3 install --upgrade pip 
+RUN pip install Scrapy==2.11.0  
+
+# Vi editor to create python files and manupilate web scraping
+RUN pip install ipython==8.17.2 
+RUN apt update
+
+# Simple editor to create scrapy spiders files
+RUN apt install -y vim 
+EXPOSE 80/tcp   
+
+# Changing container directory to home. 
+WORKDIR /home # Changing working directory to home
+
+# Copying license, citation.cff and readme files to home directory
+COPY . /home 
