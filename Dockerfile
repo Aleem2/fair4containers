@@ -6,9 +6,9 @@ RUN pip install Scrapy==2.11.0
 
 # Vi editor to create python files and manupilate web scraping
 RUN pip install ipython==8.17.2 
-RUN apt update
 
 # Simple editor to create scrapy spiders files
+RUN apt update
 RUN apt install -y vim 
 EXPOSE 80/tcp   
 
