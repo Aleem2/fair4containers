@@ -10,3 +10,6 @@ The key things this guide addresses in making containers FAIR is as follows:
 5. For further information, please contact aleem.uddin@ardc.edu.au
 
 Note: This example container packages webscraping tool called Scrapy. 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10208310.svg)](https://doi.org/10.5281/zenodo.10208310)
+
