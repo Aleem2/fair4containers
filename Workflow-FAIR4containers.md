@@ -38,28 +38,33 @@ This workflow outlines a step by step approach in creating a FAIR containers. (1
     * Tips on finding the dependencies from a working python file (say) on your desktop.
    
    
-        * In a new cell, use the following command to get all libraries
+        * From the command prompt or from the environment use the following command to get the software versions.
         ~~~~
-         pip freeze | grep -i numpy # Say getting a numpy version only. And do the same for other libraries
+         freeze | grep -i numpy # Say getting a numpy version only. And do the same for other libraries
         ~~~~
         ~~~~
-         pip freeze    # Getting all library version.
+         pip freeze  # Displays all python libraries with version numbers. 
         ~~~~
+        ~~~~
+         python -version
+       ~~~~
 
-         
-        * From the command prompt or from the environment use the following command to get the python version.
-        ~~~~
-        ! python -version
-        ~~~~
+5. Copying Licnese, Citation.cff and Dockerfile into the container. Besides having the license and citation file in the github repository, it would be ideal to put these files inside the container. This activity ensures that no matter where the container build file are stored (github) and no matter where the container is stored the Dockerfile, license and citation files go along with the container.  
 
-5. Briefly describe how the container can be used. 
+    <pre><code>
+    # Changing container directory to home. 
+    WORKDIR /home
 
-6. Persistent Identifier (DOI) - assign a persistent identifier (DOI) to the repository, once the research is completed. GitHub has a thorough guide on generating DOI’s with a Zenodo plugin.
+    # Copying license, citation.cff and readme files to home directory. 
+    COPY LICENSE CITATION.cff Dockerfile .
+    </code></pre>
+
+7. Persistent Identifier (DOI) - Assign a persistent identifier (DOI) to the repository, once the research is completed. GitHub has a thorough guide on generating DOI’s with a Zenodo plugin.
 
     6.1 Login to Zendo and click on the "link to github".
          
     [A guide to creating DOIs](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 
-7. Publish the repository to get DOI and the DOI badge, which can be updated in readme.md
+8. Publish the repository to get DOI and the DOI badge, which can be updated in readme.md
 
-8. Finally update the citation.cff files with DOI link. We recommend the root or the main DOI to be updated into the citation.cff file and any subsequent releases will have version specific DOI.
+9. Finally update the citation.cff files with DOI link. We recommend the root or the main DOI to be updated into the citation.cff file and any subsequent releases will have version specific DOI.
