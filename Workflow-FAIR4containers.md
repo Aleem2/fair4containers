@@ -2,7 +2,7 @@
 
 This workflow outlines a step by step approach in creating a FAIR containers. (15 minutes)
 
-1. Sign in to github, click on + sign beside your login to create a new github repository. Fill in the form to create a new repository with license information. Alternatively, you can add licensing information at a later stage by adding a license file named "LICENSE". Make sure to edit the license file with contributors names and year.  
+1. Create a new github repository. Fill in the form to create a new repository with license information. Alternatively, you can add licensing information at a later stage by adding a license file named "LICENSE". Make sure to edit the license file with contributors names and year.  
 
     [A guide to creating a license](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)
     
@@ -49,7 +49,7 @@ This workflow outlines a step by step approach in creating a FAIR containers. (1
          python -version
        ~~~~
 
-5. Copying Licnese, Citation.cff and Dockerfile into the container. Besides having the license and citation file in the github repository, it would be ideal to put these files inside the container. This activity ensures that no matter where the container build file are stored (github) and no matter where the container is stored the Dockerfile, license and citation files go along with the container.  
+5. Copying Licnese, Citation.cff and Dockerfile into the container. Besides having the license and citation file in the github repository, it would be ideal to put these files inside the container. This ensures that no matter where the container build file are stored (github) and no matter where the container is stored the Dockerfile, license and citation files goes along with the container.  
 
     <pre><code>
     # Changing container directory to home. 
