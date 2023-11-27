@@ -16,4 +16,4 @@ EXPOSE 80/tcp
 WORKDIR /home
 
 # Copying license, citation.cff and readme files to home directory
-COPY . .
+COPY Dockerfile CITATION.cff LICENSE .
