@@ -8,3 +8,5 @@ The key things this guide addresses in making containers FAIR is as follows:
 3. Furthermore, all this information can be packaged into the container and pushed to the container registry of your choice.
 4. Finally, a DOI can be assigned to finalised software and shared to a wider audience or publication.
 5. For further information, please contact aleem.uddin@ardc.edu.au
+
+Note: This example container packages webscraping tool called Scrapy. 
