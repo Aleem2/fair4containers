@@ -1,4 +1,4 @@
-# FAIR for Containers
+# FAIR for Containers: A Practical Guide
 This repository serves as an example for creating a FAIR Container. The Dockerfile captures the build script of a container including the dependencies. This characteristic of a container makes it possible to reproduce the exact environment. Hence covering the R component of FAIR principals. While the rest of the FAIR principals are aligned with FAIR for Research Software. 
 
 
