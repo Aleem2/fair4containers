@@ -11,7 +11,7 @@ This workflow outlines a step by step approach in creating a FAIR containers. (1
 2. Metadata is a way to provide author details and the ability to cite the software. We recommend using CITATION.cff file, which provides a machine readable format to reference the said work.
 
 
-    [A guide to creating CITATION.cff - metadata file](https://citation-file-format.github.io/)
+    [A guide to creating CITATION.cff - metadata file](https://citation-file-format.github.io/) and it also features a web frontend in [creating citation.cff file](https://citation-file-format.github.io/cff-initializer-javascript/#/). 
     
     <pre><code>
     cff-version: 1.2.0
@@ -26,46 +26,40 @@ This workflow outlines a step by step approach in creating a FAIR containers. (1
     date-released: 2021-08-11  
     </code></pre>
 
-3. Upload the Jupyter Notebook file, so that it becomes findable and accessible via the github repository.
+3. Upload or sync Dockerfile, so that it becomes findable and accessible via the github repository.
 
 
-4. Reproducibility of the Jupyter Notebook is ensured by providing the dependencies using requirements.yml file.    
+4. Reproducibility of the containers is inherent. Ensure that the container's Dockerfile specifies the dependencies.    
 
 
     [A guide to creating requirements.yml](https://mybinder.readthedocs.io/en/latest/howto/languages.html)
 
 
-    * Tips on finding the dependencies from a working Jupyter notebook on your desktop.
+    * Tips on finding the dependencies from a working python file (say) on your desktop.
    
    
         * In a new cell, use the following command to get all libraries
         ~~~~
-        ! freeze | grep -i numpy # Say getting a numpy version only. And do the same for other libraries
+         pip freeze | grep -i numpy # Say getting a numpy version only. And do the same for other libraries
         ~~~~
+        ~~~~
+         pip freeze    # Getting all library version.
+        ~~~~
+
          
-        * Inside the jupyter notebook use the following command to get the python version.
+        * From the command prompt or from the environment use the following command to get the python version.
         ~~~~
         ! python -version
         ~~~~
 
-5. Additionally, we recommend creating a bindhub and google Colab, or ‘Colaboratory’ badges. The badges can be clicked upon to launch Jupyter Notebook in a reproducible manner.
-   
-    [A guide to creating an executable binderhub badge](https://mybinder.readthedocs.io/en/latest/introduction.html)
-    
-    A Binderhub colab badge for this repository.   [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Aleem2/FAIR4JupyterNotebook/HEAD?labpath=boxplot_vs_violin.ipynb)
+5. Briefly describe how the container can be used. 
 
-6. Create Google colab badge which can be executed. (caveat dependencies ignored)
-   
-    [A guide to creating google colab badge](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb#scrollTo=-pVhOfzLx9us)
-    
-    A google Colab badge for this repository.   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aleem2/FAIR4JupyterNotebook/blob/main/boxplot_vs_violin.ipynb)
+6. Persistent Identifier (DOI) - assign a persistent identifier (DOI) to the repository, once the research is completed. GitHub has a thorough guide on generating DOI’s with a Zenodo plugin.
 
-7. Persistent Identifier (DOI) - Assign a persistent identifier (DOI) to the repository, once the research is completed. GitHub has a thorough guide on generating DOI’s with a Zenodo plugin.
-
-    7.1 Login to Zendo and click on the "link to github".
+    6.1 Login to Zendo and click on the "link to github".
          
     [A guide to creating DOIs](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 
-8. Publish the repository to get DOI and the DOI badge, which can be updated in readme.md
+7. Publish the repository to get DOI and the DOI badge, which can be updated in readme.md
 
-9. Finally update the citation.cff files with DOI link.
+8. Finally update the citation.cff files with DOI link. We recommend the root or the main DOI to be updated into the citation.cff file and any subsequent releases will have version specific DOI.
