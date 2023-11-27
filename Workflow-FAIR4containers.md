@@ -31,10 +31,6 @@ This workflow outlines a step by step approach in creating a FAIR containers. (1
 
 4. Reproducibility of the containers is inherent. Ensure that the container's Dockerfile specifies the dependencies.    
 
-
-    [A guide to creating requirements.yml](https://mybinder.readthedocs.io/en/latest/howto/languages.html)
-
-
     * Tips on finding the dependencies from a working python file (say) on your desktop.
    
    
