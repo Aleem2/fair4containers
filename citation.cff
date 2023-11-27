@@ -1,11 +1,20 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+title: 'FAIR for Containers: A Practical Guide'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
 authors:
-- family-names: "Aleem"
-  given-names: "Uddin"
-  orcid: "https://orcid.org/0000-0002-8519-5534"
-title: "fair4containers"
-version: 1.0.0
-doi: 10.5281/zenodo.1234
-date-released: 2023-11-20
-url: "https://github.com/Aleem2/fair4containers"
+  - name: Aleem Uddin
+    city: Melbourne
+    country: AU
+    post-code: '3000'
+    email: aleem.uddin@ardc.edu.au
+    orcid: 'https://orcid.org/0000-0002-8519-5534'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.1234
+license: BSD-3-Clause
