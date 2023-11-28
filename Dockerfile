@@ -4,7 +4,7 @@ FROM python:3.12.0
 RUN pip3 install --upgrade pip 
 RUN pip install Scrapy==2.11.0  
 
-# Vi editor to create python files and manupilate web scraping
+# ipython to assist in running scrapy shell.
 RUN pip install ipython==8.17.2 
 
 # Simple editor to create scrapy spiders files
