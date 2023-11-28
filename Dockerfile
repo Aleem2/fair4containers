@@ -12,8 +12,10 @@ RUN apt update
 RUN apt install -y vim 
 EXPOSE 80/tcp   
 
+# A practical suggestion in meeting the FAIR for Research Software recommendations is to include the license, citation.cff and readme files inside the container. The code snippet below makes it happen. 
+
 # Changing container directory to home. 
 WORKDIR /home
 
 # Copying license, citation.cff and readme files to home directory
-COPY Dockerfile CITATION.cff LICENSE .
+COPY Dockerfile CITATION.cff LICENSE README.md .
