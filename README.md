@@ -12,6 +12,7 @@ The key things this guide addresses in making containers FAIR is as follows:
 Note: This example container packages webscraping tool called Scrapy. 
 
 This repository specific DOI badge and dockerhub link to container image. 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10208310.svg)](https://doi.org/10.5281/zenodo.10208310)
 
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10208310.svg)](https://doi.org/10.5281/zenodo.10208310)
 
+- [Dockerhub registry link](https://hub.docker.com/r/aleem1uddin/fair4containers)
